@@ -25,7 +25,7 @@ def get_data_by_all(typeList):
     return data
 
 def getInput():
-    spec = input("Do you want to search make, model, year, or all?"
+    spec = input("Do you want to search make, model, year, or all?")
     if spec == 'make':
         make = input('Enter make:')
         return make
