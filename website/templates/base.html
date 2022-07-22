@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+<body>
+<header>
+        <div class="main">
+            <u1>{% block u1 %}
+                {% if user.is_authenticated %}
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/search">Search</a></li>
+                <li><a href="/logout">logout</a></li>
+                {% else %}
+                <li><a href="/login">LogIn</a></li>
+                <li><a href="/sign-up">Sign Up</a></li>
+                {% endif %}
+                {% endblock %}
+            </u1>
+
+        </div>
+        {% block name %}
+            <div class="title">
+                <h1>Vehicle Finder</h1>
+            </div>
+        {% endblock %}
+        <div class="container">
+            {% block content %} {% endblock %}
+        </div>
+    </header>
+</body>
+</html>
