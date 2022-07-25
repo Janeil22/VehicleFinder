@@ -1,0 +1,142 @@
+*{
+    margin:2px;
+    padding:;
+    font-family: Century Gothic;
+
+}
+
+.main{
+    background: rgba(200,200,200,.3);
+}
+
+.main h1{
+    float: center;
+    color: white;
+    font-size; 200px;
+}
+
+body{
+    background-image:linear-gradient(rgba(200,200,200,0.5),rgba(00,00,00,50)), url(./images.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+u1{
+    padding:0;
+    background:;
+    list-style-type: none;
+    margin-top: 25px;
+    font-size:20px;
+}
+
+u1 li{
+    display:inline-block;
+}
+
+u1 li a{
+    text-decoration: none;
+    color: black;
+    padding:5px 20px;
+    border: 1px solid transparent;
+    transition: 0.6s ease;
+
+}
+
+u1 li a: hover{
+    background-color: #fff;
+    color:#000;
+
+}
+
+u1 li.active a{
+    background-color: #fff;
+    color:#000;
+}
+
+u1 h1 {
+
+
+}
+
+.logo img{
+    float:left;
+    width: 150px;
+    height: auto;
+}
+
+.main{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: yellow
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    margin: 20 0 0 450px;
+    padding: 80px;
+    background:;
+    border-radius: 15px ;
+}
+
+.container h1{
+    color: #zzz;
+    font-size: 50px;
+    border: yellow
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    margin: 20 0 0 450px;
+    padding: 80px;
+    background: #23463f;
+    border-radius: 15px ;
+}
+
+.container input{
+    color: #zzz;
+    font-size: 20px;
+}
+
+form{
+    background: ;
+
+
+}
+
+.container h3{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+
+.container label{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    font-size: 28px
+}
+
+
+form input{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}

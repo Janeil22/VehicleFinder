@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="icon" href="..static/logo.png">
+      <link rel="stylesheet" type="text/css" href="static/style.css" />
+      <title>{% block title %}Home{% endblock %}</title>
+  </head>
+  <body>
+        <div class="main">
+            <u1>{% block u1 %}
+                {% if user.is_authenticated %}
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/search">Search</a></li>
+                <li><a href="/logout">Logout</a></li>
+                {% else %}
+                <li><a href="/login">LogIn</a></li>
+                <li><a href="/sign-up">Sign Up</a></li>
+                {% endif %}
+                {% endblock %}
+                <h1>Vehicle Finder</h1>
+            </u1>
+
+        </div>
+      </div>
+    </nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %} {% for category, message in messages %} {% if category ==
+    'error' %}
+    <div class="alert" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% else %}
+    <div class="alert" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endif %} {% endfor %} {% endif %} {% endwith %}
+
+    <div class="container">{% block content %} {% endblock %}</div>
+
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='index.js') }}"
+    ></script>
+  </body>
+</html>
