@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %}
+{% block u1 %}
+    {% if user.is_authenticated %}
+        <li><a href="/">Home</a></li>
+        <li><a href="/search">Search</a></li>
+        <li><a href="/logout">logout</a></li>
+    {% else %}
+        <li><a href="/login">LogIn</a></li>
+        <li class="active"><a href="/sign-up">Sign Up</a></li>
+    {% endif %}
+{% endblock %}
+{% block
+content %}
+<div class="log">
+<form method="POST">
+  <h2 align="center">Sign Up</h2>
+    <br/>
+  <div class="form group">
+      <br/>
+    <label for="email" align="center">Email Address</label>
+      <br />
+    <input
+      type="email"
+      class="form entry"
+      align="right"
+      id="email"
+      name="email"
+      placeholder="Enter email"
+    />
+    <br />
+    <label for="firstName">First Name</label>
+      <br />
+    <input
+      type="text"
+      class="form entry"
+      id="firstName"
+      name="firstName"
+      placeholder="Enter first name"
+    />
+      <br />
+    <label for="password1">Password</label>
+      <br />
+    <input
+      type="password"
+      class="form entry"
+      id="password1"
+      name="password1"
+      placeholder="Enter password"
+    />
+      <br />
+    <label for="password2">Password (Confirm)</label>
+      <br />
+    <input
+      type="password"
+      class="form entry"
+      id="password2"
+      name="password2"
+      placeholder="Confirm password"
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn">Submit</button>
+</form>
+</div>
+{% endblock %}

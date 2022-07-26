@@ -1,0 +1,104 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %}
+{% block u1 %}
+    {% if user.is_authenticated %}
+        <li><a href="/">Home</a></li>
+        <li class="active"><a href="/search">Search</a></li>
+        <li><a href="/logout">Logout</a></li>
+    {% else %}
+        <li><a href="/login">LogIn</a></li>
+        <li><a href="/sign-up">Sign Up</a></li>
+    {% endif %}
+{% endblock %}
+{% block content
+%}
+<div class="search">
+  <div class="search-form">
+      <form method="POST">
+        <div class="form-group">
+          <h3 align="center">SEARCH</h3>
+          <label for="make">MAKE</label>
+
+          <input
+            type="text"
+            class="formentrymake"
+            align="right"
+            id="make"
+            name="make"
+            placeholder="Enter make"
+          />
+
+          <label for="model">MODEL</label>
+
+          <input
+            type="text"
+            class="form entry model"
+            id="model"
+            name="model"
+            placeholder="Enter model"
+          />
+
+          <label for="year">YEAR</label>
+
+          <input
+            type="text"
+            class="form entry year"
+            id="year"
+            name="year"
+            placeholder="Enter year"
+          />
+
+          <label for="transmission">TRANSMISSION</label>
+
+          <input
+            type="text"
+            class="form entry transmission"
+            id="transmission"
+            name="transmission"
+            placeholder="Enter manual or automatic"
+          />
+          <button type="submit" class="btn">Search</button>
+        </div>
+      </form>
+      </div>
+    </div>
+    <div class="results">
+        {% if user.searches != [] %}
+        <h3 align="center">RESULTS</h3>
+        {% endif %}
+        <div>
+          {% for search in user.searches %}
+            {% if search == user.searches[-1] %}
+            <p>MAKE: {{ search.make }}</p>
+            <p>MODEL: {{ search.model }}</p>
+            <p>YEAR: {{ search.years }}</p>
+            <p>TRANSMISSION: {{ search.transmission }}</p>
+            <p>CITY MPG: {{ search.cmg }}</p>
+            <p>HIGHWAY MPG: {{ search.hmg }}</p>
+            <p>CLASS: {{ search.c }}</p>
+            <p>DRIVE: {{ search.drive }}</p>
+            <p>ENGINE: {{ search.engine }} Cylinders</p>
+            <p> {{ search.id }}
+          </p>
+            {% endif %}
+          {% endfor %}
+
+        </div>
+      </div>
+      <div class="history">
+        {% if user.searches != [] %}
+        <h3 align="center">HISTORY</h3>
+        {% endif %}
+        <ul class="list" id="searches">
+          {% for search in user.searches %}
+          <div class="list group">
+            {{ search.make }} {{ search.model }} {{ search.years }} {{ search.transmission }} {{ search.date }}
+            <button type="button" class="close" onClick="deleteSearch({{ search.id }})">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {% endfor %}
+        </ul>
+      </div>
+
+
+{% endblock %}

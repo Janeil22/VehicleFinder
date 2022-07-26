@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Century Gothic;
+
+}
+
+body{
+    background-image:linear-gradient(rgba(0,0,0,1), rgba(40,30,10,0.6),rgba(0,0,0,1)), url(./images.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.navbar{
+    background-color: ;
+    padding: 30px;
+    width: auto;
+    min-height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dotted black;
+}
+
+.navbar ul{
+    padding:10;
+    background:;
+    list-style-type: none;
+    margin-top: 15px;
+    font-size:18px;
+
+}
+
+.navbar ul li{
+    display:inline;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding:20;
+    transition: 0.3s ease;
+
+}
+
+.navbar ul li a: hover{
+
+    color:#000;
+
+}
+
+.navbar ul li.active a{
+    background-color: #fff;
+    color:#000;
+}
+
+.navbar h1{
+    float: middle;
+}
+
+.container {
+    background-color: rgba(30,150,190,0);
+    padding: 10px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px solid black;
+    transition: 0.5s ease;
+}
+
+.container form{
+    padding: 10px;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px solid black;
+    align: center;
+    margin-bottom: 10px;
+}
+
+.log{
+    padding: 15px;
+}
+.log h2{
+    float: left;
+    padding: px;
+}
+
+.container h3{
+    padding: 10px;
+    float: center;
+}
+
+.container p{
+    padding: 5px;
+}
+
+.container label{
+    padding: 5px;
+}
+.container input {
+    display: inline-block;
+    color: black;
+    size: 60px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-areas:
+    "search"
+    "results"
+    "history"
+}
+
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
